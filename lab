@@ -96,11 +96,9 @@ public:
  
    Novel (string category) : Book (category)
     {}
- 
     {
 		cout<<"Novel is"<<endl<<;
 	}
-
 };
 
 //-------------------------------------------------
