@@ -11,7 +11,8 @@ private:
 	string author;
 	int amm_pages;
 	int prod_year;
-
+protected:
+  	int book;
 public:
 	void setBook(string book);
 	void setProd(string prod);
@@ -86,10 +87,27 @@ int Book::getProdYear()
 {
 	return prod_year;
 }
+
+class Novel : public Book
+{
+public:
+    Novel() : Book ()
+    {}
+ 
+   Novel (string category) : Book (category)
+    {}
+ 
+    {
+		cout<<"Novel is"<<endl<<;
+	}
+
+};
+
 //-------------------------------------------------
 int main()
 {
 	Book b;
+	Novel n;
 	string tmp;
 	int pr;
 	cout << "Enter the name of the book\n";
@@ -110,6 +128,8 @@ int main()
 	cout << "Enter the prod_year\n";
 	cin >> pr;
 	b.setProdYear(pr);
+    	cout << "Enter the name of the category\n";
+  	Novel.show_category();
 
 	cout << "##########################\n";
 	cout << "DATA: \n";
