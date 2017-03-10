@@ -1,0 +1,124 @@
+#include <string>
+#include <iostream>
+using namespace std;
+
+class Book
+{
+private:
+	string book;
+	string prod;
+	string type;
+	string author;
+	int amm_pages;
+	int prod_year;
+
+public:
+	void setBook(string book);
+	void setProd(string prod);
+	void setType(string type);
+	void setAuthor(string author);
+	void setAmmPages(int amm_pages);
+	void setProdYear(int prod_year);
+	string getBook();
+	string getProd();
+	string getType();
+	string getAuthor();
+	int getAmmPages();
+	int getProdYear();
+};
+
+void Book::setBook(string book_name)
+{
+	book = book_name;
+}
+
+void Book::setProd(string prod_name)
+{
+	prod = prod_name;
+}
+
+void Book::setType(string type_name)
+{
+	type = type_name;
+}
+
+void Book::setAuthor(string author_name)
+{
+	author = author_name;
+}
+
+void Book::setAmmPages(int ammpages_name)
+{
+	amm_pages = ammpages_name;
+}
+
+void Book::setProdYear(int prodyear_name)
+{
+	prod_year = prodyear_name;
+}
+
+string Book::getBook()
+{
+	return book;
+}
+
+string Book::getProd()
+{
+	return prod;
+}
+
+string Book::getType()
+{
+	return type;
+}
+
+string Book::getAuthor()
+{
+	return prod;
+}
+
+int Book::getAmmPages()
+{
+	return amm_pages;
+}
+
+int Book::getProdYear()
+{
+	return prod_year;
+}
+//-------------------------------------------------
+int main()
+{
+	Book b;
+	string tmp;
+	int pr;
+	cout << "Enter the name of the book\n";
+	cin >> tmp;
+	b.setBook(tmp);
+	cout << "Enter the prod\n";
+	cin >> tmp;
+	b.setProd(tmp);
+	cout << "Enter the type\n";
+	cin >> tmp;
+	b.setType(tmp);
+	cout << "Enter the author\n";
+	cin >> tmp;
+	b.setAuthor(tmp);
+	cout << "Enter the amm_pages\n";
+	cin >> pr;
+	b.setAmmPages(pr);
+	cout << "Enter the prod_year\n";
+	cin >> pr;
+	b.setProdYear(pr);
+
+	cout << "##########################\n";
+	cout << "DATA: \n";
+	cout << "book_name:" << b.getBook() << endl;
+	cout << "prod_name:" << b.getProd() << endl;
+	cout << "type_name:" << b.getType() << endl;
+	cout << "author_name:" << b.getAuthor() << endl;
+	cout << "amm_pages:" << b.getAmmPages() << endl;
+	cout << "prod_year:" << b.getProdYear() << endl;
+	system("pause");
+	return 0;
+}
